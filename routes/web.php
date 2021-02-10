@@ -21,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/ingrediant-show/{id}',[IngrediantController::class,'show']);
+Route::post('/ingrediant-delete/{id}',[IngrediantController::class,'destroy']);
+

@@ -47,7 +47,16 @@
                     <td>{{$ingrediant->nom}}</td>
                     <td>{{$ingrediant->quantite}}</td>
                     <td>{{$ingrediant->photo}}</td>
-                    <td><a class="btn btn-danger" href="/ingrediant-show/{{$ingrediant->id}}">show</a></td>
+                    <td><a class="btn btn-primary" href="/ingrediant-show/{{$ingrediant->id}}">show</a></td>
+                    <td>
+                        <form action="/ingrediant-delete/{{$ingrediant->id}}" method="post">
+                            @csrf
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                        
+                    </td>
+                    
+                    
                 </tr>
             @endforeach
           

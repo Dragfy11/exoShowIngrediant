@@ -11,4 +11,9 @@ class IngrediantController extends Controller
         $show=Ingrediant::find($id);
         return view('show',compact('show'));
     }
+    public function destroy($id){
+        $destroy=Ingrediant::find($id);
+        $destroy->delete();
+        return redirect()->back();
+    }
 }
