@@ -38,6 +38,8 @@
             <th scope="col">nom</th>
             <th scope="col">quantité</th>
             <th scope="col">photo</th>
+            <th scope="col"> </th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -57,13 +59,15 @@
                     </td>
                     
                     
+                    
                 </tr>
             @endforeach
+            
           
         </tbody>
       </table> 
       </div>
-      
+      @include('create')
 
 
     <script src="{{asset('css/app.css')}}"></script>

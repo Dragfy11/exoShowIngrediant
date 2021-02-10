@@ -20,6 +20,7 @@ Route::get('/', function () {
     return view('welcome', compact('ingrediants'));
 });
 
+Route::post('/ingrediant-store', [IngrediantController::class, 'store']);
 Route::get('/ingrediant-show/{id}',[IngrediantController::class,'show']);
 Route::post('/ingrediant-delete/{id}',[IngrediantController::class,'destroy']);
 
