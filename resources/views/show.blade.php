@@ -31,29 +31,16 @@
         </div>
       </nav>
       <div class="container mt-5">
-         <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">nom</th>
-            <th scope="col">quantité</th>
-            <th scope="col">photo</th>
-          </tr>
-        </thead>
-        <tbody>
-            @foreach ($ingrediants as $ingrediant)
-                <tr>
-                <th scope="row">{{$ingrediant->id}}</th>
-                    <td>{{$ingrediant->nom}}</td>
-                    <td>{{$ingrediant->quantite}}</td>
-                    <td>{{$ingrediant->photo}}</td>
-                    <td><a class="btn btn-danger" href="/ingrediant-show/{{$ingrediant->id}}">show</a></td>
-                </tr>
-            @endforeach
-          
-        </tbody>
-      </table> 
+          <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{$show->id}}</h5>
+                    <h5 class="card-title">Nom: {{$show->nom}}</h5>
+                    <h5 class="card-title">Quantité: {{$show->quantite}}</h5>
+                    <h5 class="card-title">Photo: {{$show->photo}}</h5>
+                </div>
+            </div>
       </div>
+      
       
 
 
