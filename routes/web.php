@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IngrediantController;
+use App\Models\Ingrediant;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $ingrediants=Ingrediant::all();
+    return view('welcome', compact('ingrediants'));
 });
+
+Route::get('/ingrediant-show/{id}',[IngrediantController::class,'show']);
